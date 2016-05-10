@@ -23,6 +23,11 @@ public:
 
     // add a new rental
     void addRental(const Rental& rental);
+	
+	//calculates amount for customers
+	double customer::amountFor(const Rental& r) const{
+		return 0;
+	}
 
     // customer rental statement
     std::string statement() const;
