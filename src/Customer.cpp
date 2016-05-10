@@ -82,7 +82,7 @@ std::string Customer::statement() const {
         result += "\t";
 
         double thisAmount = 0;
-        switch(it->getVideo().getCode()) {
+      /*  switch(it->getVideo().getCode()) {
 
             case Video::REGULAR:
             thisAmount += 2;
@@ -99,7 +99,7 @@ std::string Customer::statement() const {
             if (it->getDaysRented() > 3)
                 thisAmount += (it->getDaysRented() - 3) * 1.5;
             break;
-        }
+        }*/
 
         // amount of rental
         std::ostringstream out_str_stream;
@@ -109,13 +109,15 @@ std::string Customer::statement() const {
 
         totalAmount += thisAmount;
     }
-
-    // total amount owed
-    result += "Amount owed is: ";
-    std::ostringstream out_str_stream;
-    out_str_stream << totalAmount;
-    result += out_str_stream.str();
-    result += "\n";
+	
+	void Customer::printTotal(totalAmount){
+		 // total amount owed
+		result += "Amount owed is: ";
+		std::ostringstream out_str_stream;
+		out_str_stream << totalAmount;
+		result += out_str_stream.str();
+		result += "\n";
+	}
 
     // frequent renter points earned
     result += "You earned: ";

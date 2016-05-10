@@ -24,6 +24,9 @@ public:
     // add a new rental
     void addRental(const Rental& rental);
 	
+	//prints total amount owed
+	void printTotal(double totalAmount);
+	
 	//calculates amount for customers
 	double customer::amountFor(const Rental& r) const{
 		return 0;
