@@ -27,6 +27,9 @@ public:
 	//prints total amount owed
 	void printTotal(double totalAmount);
 	
+	//prints total amount earned
+	void printEarned(int frequentRenterPoints);
+	
 	//calculates amount for customers
 	double customer::amountFor(const Rental& r) const{
 		return 0;
